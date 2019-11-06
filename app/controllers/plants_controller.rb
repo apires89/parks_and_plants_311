@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only:[:destroy]
-  before_action :set_garden
+  before_action :set_garden, only:[:index,:new,:create,:destroy]
   def index
     @plants = @garden.plants
   end
